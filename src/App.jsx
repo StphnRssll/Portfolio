@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="app bg-[url('/paper-bg.jpg')] min-h-screen min-w-full bg-center bg-cover bg-no-repeat font-baskerville">
+      {/* <div className="app bg-[url('/paper-bg.jpg')] min-h-screen w-full bg-cover bg-center bg-no-repeat font-baskerville"> */}
+      <div className="main max-w-7xl mx-auto my-0 p-6 sm:p-16 text-center flex flex-col space-y-[31vh] text-gray-800 ink-effect">
+        <div className="top-links flex flex-row justify-between ">
+          <div className=" border-green-800 border-b-2 text-lg px-2">
+            <p>StephenDonRussell@gmail.com</p>
+          </div>
+          <div className=" border-green-800 border-b-2 text-lg px-2">
+            <p>About</p>
+          </div>
+        </div>
+        <div className="content min-h-[80%] flex flex-col">
+          <h1 className=" text-4xl font-semibold tracking-wider">
+            Stephen Russell
+          </h1>
+          <p className=" text-lg ">Software Developer</p>
+        </div>
+        <div className="bottom-links border-b-2 border-b-green-800 w-fit mx-auto">
+          <ul className="flex flex-row my-1 mx-8">
+            <li className="mx-2">Portfolio</li>
+            <li>|</li>
+            <li className="mx-2">Resume</li>
+            <li>|</li>
+            <li className="mx-2">GitHub</li>
+            <li>|</li>
+            <li className="mx-2">LinkedIn</li>
+          </ul>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
